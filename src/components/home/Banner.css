@@ -1,0 +1,12 @@
+
+img{
+    width: 1358px;
+    height: 500px;
+}
+
+/* @media (max-width:768px){
+    .banner_img{
+        object-fit: cover;
+        height: 180px;
+    }
+} */
