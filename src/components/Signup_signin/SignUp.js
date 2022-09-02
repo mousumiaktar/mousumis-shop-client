@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from "../../images/logo.png";
 import './signup.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
 
@@ -14,19 +16,48 @@ const SignUp = () => {
         cpassword: ""
     });
 
-    console.log(udata);
+    // console.log(udata);
 
     const adddata = (e) => {
         const { name, value } = e.target;
-        console.log(name,value);
+        // console.log(name,value);
 
-        setUdata((pre) => {
+        setUdata(() => {
             return {
-                ...pre,
+                ...udata,
                 [name]: value
             }
         })
     };
+
+
+    const senddata = async(e) =>{
+        e.preventDefault();
+        const {fname,email,mobile,password,cpassword} = udata;
+
+        const res = await fetch("register",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                fname,email,mobile,password,cpassword
+            })
+        });
+        const data = await res.json();
+        // console.log(data);
+
+        if(res.status === 422 || !data){
+            toast.warning("invalid input field",{
+                position: "top-center",
+            });
+        }else{
+            toast.success("data successfully added",{
+                position: "top-center",
+            });
+            setUdata({...udata,fname:"",email:"",mobile:"",password:"",cpassword:""});
+        }
+    }
 
     return (
         <section>
@@ -73,7 +104,7 @@ const SignUp = () => {
                                 id="cpassword" />
                         </div>
                         <button type="submit" className="signin_btn"
-                        //  onClick={senddata}
+                         onClick={senddata}
                          >Continue</button>
 
                         <Divider />
@@ -84,7 +115,7 @@ const SignUp = () => {
                         </div>
                     </form>
                 </div>
-                  {/* <ToastContainer /> */}
+                  <ToastContainer />
             </div>
         </section>
     );
