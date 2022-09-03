@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './signup.css';
 import logo from "../../images/logo.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signin = () => {
 
@@ -9,7 +11,7 @@ const Signin = () => {
         email:"",
         password:""
     });
-    console.log(logdata);
+    // console.log(logdata);
 
     const adddata = (e)=>{
         const {name, value} = e.target;
@@ -20,6 +22,39 @@ const Signin = () => {
                 [name]:value,
             }
         })
+    }
+
+
+    const senddata = async(e)=>{
+        e.preventDefault();
+
+        const {email, password} = logdata;
+
+        const res = await fetch("/login",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                email, password
+            })
+        });
+
+        const data = await res.json();
+        console.log(data);
+
+        if(res.status === 400 || !data){
+            console.log("invalid details");
+            toast.warning("invalid input field",{
+                position: "top-center",
+            });
+        }else{
+            console.log("data valid");
+            toast.success("Login successfully",{
+                position: "top-center",
+            });
+            setData({...logdata, email:"", password:""});
+        }
     }
 
 
@@ -48,10 +83,10 @@ const Signin = () => {
                                 id="password" placeholder="At least 6 characters" />
                         </div>
                         <button type="submit" className="signin_btn"
-                        //  onClick={senddata}
+                         onClick={senddata}
                         >Continue</button>
                     </form>
-                    {/* <ToastContainer /> */}
+                    <ToastContainer />
                 </div>
                 <div className="create_accountinfo">
                     <p>New to Amazon?</p>

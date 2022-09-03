@@ -44,6 +44,8 @@ const SignUp = () => {
                 fname,email,mobile,password,cpassword
             })
         });
+
+        
         const data = await res.json();
         // console.log(data);
 

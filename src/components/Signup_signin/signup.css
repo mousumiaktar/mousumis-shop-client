@@ -54,18 +54,18 @@ section{
     margin-top: 7px;
     margin-bottom: 23px;
     width: 100%;
-    background: #f3d078;
+    background: #FE9108;
     cursor: pointer;
     border:1px solid #9c7e31;
     height: 29px;
     outline: none;
     border-radius: 3px;
     color: #111;
-    background: linear-gradient(to bottom,#f7dfa5,#f0c14b)
+    background: #FE9108;
 }
 
 .sign_form input:focus{
-    box-shadow: 0 0 5px 0px #ffbc2c;
+    box-shadow: 0 0 5px 0px #CB6011;
 }
 
 .sign_form .signin_info{
@@ -86,7 +86,7 @@ section{
     font-size: 13px;
     letter-spacing: .5px;
     margin-left: 5px;
-    color: #0066c0;
+    color: #FE9108;
     text-decoration: none;
     font-weight:600;
 }
