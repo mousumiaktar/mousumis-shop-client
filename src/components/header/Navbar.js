@@ -6,12 +6,37 @@ import { Avatar, Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NavLink } from 'react-router-dom';
 import { Logincontext } from '../context/ContextProvider';
+import { useEffect } from 'react';
 
 
 const Navbar = () => {
 
     const { account, setAccount } = useContext(Logincontext);
     console.log(account);
+
+    const getdetailsvaliduser = async () => {
+        const res = await fetch("/validuser", {
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            credentials: "include"
+        });
+
+        const data = await res.json();
+        // console.log(data);
+
+        if (res.status !== 201) {
+            console.log("first login");
+        } else {
+            setAccount(data);
+        }
+    };
+
+    useEffect(()=>{
+        getdetailsvaliduser();
+    },[]);
 
     return (
         <header>
@@ -53,7 +78,7 @@ const Navbar = () => {
                     </div>
                     {
                         account ?
-                            <Avatar className='avatar'>{account.fname[0].toUpperCase()}</Avatar>
+                            <Avatar className='avatar2'>{account.fname[0].toUpperCase()}</Avatar>
                             :
                             <Avatar className='avatar'></Avatar>
                     }
