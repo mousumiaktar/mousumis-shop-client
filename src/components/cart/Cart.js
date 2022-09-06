@@ -1,4 +1,4 @@
-import { Divider } from '@mui/material';
+import { CircularProgress, Divider } from '@mui/material';
 import React, { useContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -7,7 +7,7 @@ import './cart.css'
 import { Logincontext } from "../context/ContextProvider";
 
 const Cart = () => {
-    const [inddata, setInddata] = useState([]);
+    const [inddata, setInddata] = useState("");
     console.log(inddata);
 
     const { id } = useParams("");
@@ -38,7 +38,7 @@ const Cart = () => {
     }
 
     useEffect(() => {
-        getinddata();
+        setTimeout(getinddata,1000);
     }, [id]);
 
     // ADD TO CART
@@ -96,6 +96,13 @@ const Cart = () => {
                         <p className="description">About the Iteam : <span style={{ color: "#565959", fontSize: "14px", fontWeight: "500", letterSpacing: "0.4px" }}>{inddata.description}</span></p>
                     </div>
                 </div>
+            }
+
+            {
+                !inddata ? <div className='circle'>
+                    <CircularProgress />
+                    <h2>Loaing...</h2>
+                </div>:""
             }
         </div>
     );
