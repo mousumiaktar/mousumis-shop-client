@@ -10,7 +10,6 @@
     margin: 0 auto;
     padding:40px 20px;
     display: flex;
-    /* justify-content: space-around; */
 }
 
 .buynow_container .left_buy{
@@ -28,7 +27,7 @@
 .left_buy p{
     font-size: 14px;
     margin: 5px auto;
-    color: #007185;
+    color: #E7283E;
 }
 
 .left_buy span{
@@ -82,22 +81,14 @@
 
 
 .item_details .add_remove_select p{
-    color: #007185!important;
+    color: black!important;
+    background-color: #FE9108;
+    padding: 5px;
+    border-radius: 10px;
     font-size: 13px;
     margin-top: 10px;
 }
 
-.item_details .add_remove_select select{
-    padding: 5px;
-    width: 50px;
-    border-radius: 8px;
-    background-color: #eeeded;
-    letter-spacing: .2px;
-    margin-top: 4px;
-    outline: none;
-   border: 1px solid #e7e7e7;
-    box-shadow: 0 0 15px -7px rgba(0,0,0,1);
-}
 
 .sub_item{
     display: flex;
@@ -132,7 +123,7 @@
 }
 
 .buynow_container .right_buy .cost_right p{
-    color: #007185;
+    color: #E7283E;
     font-size: 12px;
     font-weight: 500;
     margin-top: 20px;
@@ -150,7 +141,7 @@
     border-radius: 8px;
     border: none;
     outline: none;
-    background-color:#FFD814;
+    background-color:#FE9108;
     font-size: 14px;
     cursor: pointer;
     box-shadow: 0 0 10px -5px rgba(0,0,0,.5);

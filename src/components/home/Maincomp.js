@@ -4,6 +4,9 @@ import Banner from './Banner';
 import Slide from './Slide';
 import {getProducts} from "../redux/actions/action";
 import {useDispatch, useSelector} from "react-redux";
+import Midbanner from './Midbanner';
+import Menu from './Menu';
+import Category from './Category';
 
 const Maincomp = () => {
 
@@ -29,12 +32,18 @@ const Maincomp = () => {
                     </div>
 
                     <div className="right_slide">
-                        <h4>Festive latest Items</h4>
+                        <h4 style={{color:"red",}}>Festive latest Items</h4>
                         <img src="https://coreldrawdesign.com/resources/previews/preview-restaurant-food-banner-template-design-1621680592.jpg" alt="rightimg" />
                         <a href="#">see more</a>
                     </div>
                 </div>
                 {/* <Slide title="Today's Deal" products={products} /> */}
+                <Menu />
+                <Midbanner />
+                <Category />
+                
+                
+                
             </div>
         </>
     );

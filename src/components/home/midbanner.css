@@ -1,0 +1,53 @@
+.midbanner-area{
+    margin-top: 30px;
+}
+.midbanner img{
+    height: 300px;
+    opacity: 0.9;
+    position: relative;
+}
+.midbanner-details{
+    display: flex;
+    color: white;
+    font: bold;
+    position: absolute;
+    margin-top: -280px;
+    margin-left: 1000px;
+    text-shadow: 2px 2px black;
+}
+.midbanner-details p{
+    line-height: 10px;
+}
+.title-details{
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 20px;
+    font-size: 40px;
+    line-height: 20px;
+    color: #FE9108;
+    text-shadow: 2px 2px #FE9108;
+}
+
+@media (max-width:768px) {
+    .midbanner-details{
+        flex-wrap: wrap;
+    }
+    .midbanner img{
+        height: 500px;
+    }
+    .title-details{
+        margin-left: 10px;
+        margin-top: -500px;
+        color: #FE9108;
+        font-size: 20px;
+    }
+    .midbanner-details{
+        display: flex;
+        color: white;
+        font: bold;
+        position: absolute;
+        margin-top: -300px;
+        margin-left: 10px;
+        text-shadow: 2px 2px black;
+    }
+}

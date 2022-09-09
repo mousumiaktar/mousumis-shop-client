@@ -1,7 +1,6 @@
 import { Divider } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from "../../images/logo.png";
 import './signup.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -64,9 +63,6 @@ const SignUp = () => {
     return (
         <section>
             <div className="sign_container">
-                <div className="sign_header">
-                <img src={logo} alt="" />
-                </div>
                 <div className="sign_form">
                     <form method="POST">
                         <h1>Create account</h1>

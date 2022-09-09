@@ -3,7 +3,7 @@
     top: 60px;
     width: 100%;
     height: 100vh;
-    /* background-color: rgb(245, 239, 239); */
+    margin-bottom: 15px;
 }
 
 .cart_section .cart_container{
@@ -22,7 +22,8 @@
 }
 
 .left_cart img{
-    width:50%;
+    width:300px;
+    height: 300px;
     margin-bottom: 30px;
 }
 
@@ -37,7 +38,7 @@
     cursor: pointer;
 }
 .cart_btn .cart_btn1{
-    background-color:#FFA41C;
+    background-color:#FE9108;
     border: none;
     outline: none;
     border-radius: 20px;
@@ -78,14 +79,12 @@
 .right_cart h3{
     font-weight: 500;
     font-size: 23px;
-    /* margin-bottom: 5px; */
     margin-top: 0;
 }
 
 .right_cart h4{
     font-weight: 500;
     font-size: 20px;
-    /* margin-bottom: 15px; */
     margin-top: -10px;
 }
 

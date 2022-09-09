@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './signup.css';
-import logo from "../../images/logo.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Logincontext } from '../context/ContextProvider';
@@ -66,9 +65,6 @@ const Signin = () => {
     return (
         <section>
             <div className="sign_container">
-                <div className="sign_header">
-                <img src={logo} alt="" />
-                </div>
                 <div className="sign_form">
                     <form method="POST">
                         <h1>Sign-In</h1>
@@ -94,8 +90,8 @@ const Signin = () => {
                     <ToastContainer />
                 </div>
                 <div className="create_accountinfo">
-                    <p>New to Amazon?</p>
-                    <button>  <NavLink to="/register">Create your Amazon Account</NavLink></button>
+                    <p>New to Food?</p>
+                    <button>  <NavLink to="/register">Create your Food Account</NavLink></button>
                 </div>
             </div>
 

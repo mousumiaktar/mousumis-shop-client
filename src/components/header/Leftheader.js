@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import  { Avatar,Divider }  from '@mui/material';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { Logincontext } from '../context/ContextProvider';
 import { NavLink } from 'react-router-dom';
 import './leftheader.css';
 
-const Leftheader = ({logClose}) => {
+const Leftheader = ({logClose, logoutuser}) => {
 
     const { account, setAccount } = useContext(Logincontext);
 
@@ -29,6 +30,14 @@ const Leftheader = ({logClose}) => {
                     {
                         account ? <NavLink to="/buynow">Your Orders</NavLink> :
                         <NavLink to="/login">Your Orders</NavLink>
+                    }
+                    {
+                        account ? 
+                        <div className='flag'>
+                            <LogoutIcon style={{fontSize: 18, marginRight:4}} />
+                            <h3 onClick={()=>logoutuser()} style={{cursor:"pointer", fontWeight:500}}>Logout</h3>
+                        </div>:
+                        <NavLink to="/login">Signin</NavLink>
                     }
                 </div>
             </div>

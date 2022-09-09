@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import "./Navbar.css";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo2.png";
 import SearchIcon from '@mui/icons-material/Search';
 import { Avatar, Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -130,7 +130,7 @@ const Navbar = () => {
                         <MenuIcon style={{ color: "#fff" }} />
                     </IconButton>
                     <Drawer open={dropen} onClose={handleDrawerClose}>
-                        <Leftheader logClose={handleDrawerClose} />
+                        <Leftheader logClose={handleDrawerClose} logoutuser={logOutUser}/>
                     </Drawer>
 
                     <div className='navlogo'>
