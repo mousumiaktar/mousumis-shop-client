@@ -8,11 +8,11 @@ const Midbanner = () => {
                 <img src={midbanner} alt="" />
             </div>
             <div className='full-area'>
-                <div className='title-details'>
+                <div className='title-details' data-aos="fade-down-right">
                     <h2>It’s About Good Food & </h2>
                     <h2>Fresh Ingredients</h2>
                 </div>
-                <div className='midbanner-details'>
+                <div className='midbanner-details' data-aos="fade-down-left">
                     <div>
                         <h3>Opening </h3>
                         <hr />

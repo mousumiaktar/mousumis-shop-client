@@ -10,22 +10,26 @@ const Category = () => {
         <div className='category-full-area' >
             <h1 className='category-title'>Our Food Category</h1>
             <div className='category-area'>
-                <div className='category-details'>
+                <div className='category-details' data-aos="fade-down-right"
+                    data-aos-duration="2000">
                     <img src={category1} alt="" />
                     <h3>Grilled Chicken Stick</h3>
                     <h4>52.35$</h4>
                 </div>
-                <div className='category-details'>
+                <div className='category-details' data-aos="fade-down-right"
+                    data-aos-duration="1000">
                     <img src={category2} alt="" />
                     <h3>Chicken Barista platter</h3>
                     <h4>32.35$</h4>
                 </div>
-                <div className='category-details'>
+                <div className='category-details' data-aos="fade-down-left"
+                    data-aos-duration="1000">
                     <img src={category3} alt="" />
                     <h3>French Fries Pack</h3>
                     <h4>15.35$</h4>
                 </div>
-                <div className='category-details'>
+                <div className='category-details' data-aos="fade-down-left"
+                    data-aos-duration="2000">
                     <img src={category5} alt="" />
                     <h3>French Fries Pack</h3>
                     <h4>15.35$</h4>

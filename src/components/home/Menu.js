@@ -17,13 +17,16 @@ const Menu = () => {
             </div> */}
             <div className='menu-full-area'>
                 <div className='menu-top'>
-                    <h1>Popular Menu</h1>
-                    <p>Restaurants are known to provide excellent social settings and</p>
-                    <p>you could enjoy a wonderful meal amidst friends, family, and great ambiance.</p>
+                    <div data-aos="fade-right"><h1>Popular Menu</h1></div>
+                    <div data-aos="fade-left">
+                        <p>Restaurants are known to provide excellent social settings and</p>
+                        <p>you could enjoy a wonderful meal amidst friends, family, and great ambiance.</p>
+                    </div>
                 </div>
                 <div className='menu-area'>
                     <div className='menu-left'>
-                        <div className='menu-detail'>
+                        <div className='menu-detail' data-aos="fade-up-right"
+                            data-aos-duration="1000">
                             <img src={menu1} alt="" />
                             <div className='short-detail'>
                                 <h3>Beef Burger Stack <span>$30.00
@@ -31,7 +34,8 @@ const Menu = () => {
                                 <p>Hot Big Full Plater Cosmos</p>
                             </div>
                         </div>
-                        <div className='menu-detail'>
+                        <div className='menu-detail' data-aos="fade-up-right"
+                            data-aos-duration="1000">
                             <img src={menu2} alt="" />
                             <div className='short-detail'>
                                 <h3>Cheeseburger Stack <span>$35.00
@@ -43,7 +47,8 @@ const Menu = () => {
                     </div>
 
                     <div className='menu-middle'>
-                        <div className='menu-detail'>
+                        <div className='menu-detail' data-aos="fade-up-right"
+                            data-aos-duration="1000">
                             <img src={menu3} alt="" />
                             <div className='short-detail'>
                                 <h3>Mushroom Pizza <span>$40.00
@@ -51,7 +56,8 @@ const Menu = () => {
                                 <p>Hot Big Full Plater Cosmos</p>
                             </div>
                         </div>
-                        <div className='menu-detail'>
+                        <div className='menu-detail' data-aos="fade-up-left"
+                            data-aos-duration="1000">
                             <img src={menu7} alt="" />
                             <div className='short-detail'>
                                 <h3>Pizza Alla Pala <span>$60.00
@@ -63,7 +69,8 @@ const Menu = () => {
 
 
                     <div className='menu-right'>
-                        <div className='menu-detail'>
+                        <div className='menu-detail' data-aos="fade-up-left"
+                            data-aos-duration="1000">
                             <img src={menu5} alt="" />
                             <div className='short-detail'>
                                 <h3>Egg Cheese Bread <span>$50.00
@@ -71,7 +78,8 @@ const Menu = () => {
                                 <p>Hot Big Full Plater Cosmos</p>
                             </div>
                         </div>
-                        <div className='menu-detail'>
+                        <div className='menu-detail' data-aos="fade-up-left"
+                            data-aos-duration="1000">
                             <img src={menu6} alt="" />
                             <div className='short-detail'>
                                 <h3>Pizza Al Tonno <span>$55.00

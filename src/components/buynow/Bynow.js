@@ -60,7 +60,7 @@ const Bynow = () => {
                                                     <p className="unusuall">Usually dispatched in 8 days.</p>
                                                     <p>Eligible for FREE Shipping</p>
                                                     <Option deletedata={e.id} get={getdatabuy} />
-                                                    
+                                    
                                                 </div>
                                                 <h3 className="item_price">₹{e.price.cost}</h3>
                                             </div>
