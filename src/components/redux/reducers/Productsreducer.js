@@ -1,4 +1,5 @@
-const products = [];
+const fromDb = undefined;
+const products = fromDb ||  [];
 
 export const getProductsreducers = (state={products},action)=>{
     switch (action.type) {
