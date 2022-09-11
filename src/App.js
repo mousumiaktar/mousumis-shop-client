@@ -9,6 +9,7 @@ import SignUp from './components/Signup_signin/SignUp';
 import Buynow from './components/buynow/Bynow';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useEffect, useState } from 'react';
+import Notfound from './components/home/Notfound';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/register" element={<SignUp />} />
         <Route path="/getproductsone/:id" element={<Cart />} />
         <Route path="/buynow" element={<Buynow />} />
+        <Route path="*" element={<Notfound></Notfound>}></Route>
       </Routes>
       <Footer />
         </>
