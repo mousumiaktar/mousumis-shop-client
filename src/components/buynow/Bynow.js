@@ -12,7 +12,7 @@ const Bynow = () => {
     console.log(cartdata);
 
     const getdatabuy = async () => {
-        const res = await fetch("/cartdetails", {
+        const res = await fetch("https://food-0t4k.onrender.com/cartdetails", {
             method: "GET",
             headers: {
                 Accept: "application/json",

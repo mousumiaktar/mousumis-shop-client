@@ -23,7 +23,7 @@ const Cart = () => {
 
 
     const getinddata = async () => {
-        const res = await fetch(`/getproductsone/${id}`, {
+        const res = await fetch(`https://food-0t4k.onrender.com/getproductsone/${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -48,7 +48,7 @@ const Cart = () => {
 
     // ADD TO CART
     const addtocart = async (id) => {
-        const checkres = await fetch(`/addcart/${id}`, {
+        const checkres = await fetch(`https://food-0t4k.onrender.com/addcart/${id}`, {
             method: "POST",
             headers: {
                 Accept: "application/json",

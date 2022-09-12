@@ -51,7 +51,7 @@ const Navbar = () => {
 
     // USER VALIDATION............................. 
     const getdetailsvaliduser = async () => {
-        const res = await fetch("/validuser", {
+        const res = await fetch("https://food-0t4k.onrender.com/validuser", {
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -84,7 +84,7 @@ const Navbar = () => {
 
     //USER LOGOUT............................... 
     const logOutUser = async () => {
-        const res2 = await fetch("/logout", {
+        const res2 = await fetch("https://food-0t4k.onrender.com/logout", {
             method: "GET",
             headers: {
                 Accept: "application/json",
