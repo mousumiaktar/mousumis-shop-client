@@ -33,7 +33,7 @@ const Signin = () => {
 
         const {email, password} = logdata;
 
-        const res = await fetch("/https://food-0t4k.onrender.com/login",{
+        const res = await fetch("https://food-0t4k.onrender.com/login",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
